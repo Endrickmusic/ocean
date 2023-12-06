@@ -40,9 +40,6 @@ function Box() {
     
     <mesh ref={ref} scale={10}>
       <boxGeometry />
-      {/* <Text3D>
-      Testing
-     </Text3D> */}
       <meshNormalMaterial />
     </mesh>
   
@@ -51,7 +48,11 @@ function Box() {
 
 export default function App() {
   return (
-    <Canvas camera={{ position: [0, 5, -100], fov: 55, near: 1, far: 20000 }}>
+    <Canvas camera={{ 
+      position: [0, 40, -100], 
+      rotation: [ 0.18 * Math.PI, Math.PI, 0 ],
+      fov: 55, near: 1, 
+      far: 20000 }}>
       <pointLight position={[100, 100, 100]} />
       <pointLight position={[-100, -100, -100]} />
       <Suspense fallback={null}>
@@ -59,7 +60,7 @@ export default function App() {
         <Box />
       </Suspense>
       <Sky scale={1000} sunPosition={[500, 150, -1000]} turbidity={0.1} />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </Canvas>
   )
 }
