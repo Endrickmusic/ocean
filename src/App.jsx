@@ -38,8 +38,8 @@ function Box() {
   })
   return (
     
-    <mesh ref={ref} scale={10}>
-      <boxGeometry />
+    <mesh ref={ref} scale={6}>
+      <torusGeometry />
       <meshNormalMaterial />
     </mesh>
   
