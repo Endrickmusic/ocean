@@ -20,7 +20,7 @@ function Ocean() {
       sunDirection: new THREE.Vector3(),
       sunColor: 0xffffff,
       waterColor: 0x001e0f,
-      distortionScale: 3.7,
+      distortionScale: 4.7,
       fog: false,
       format: gl.encoding
     }),
@@ -38,9 +38,13 @@ function Box() {
   })
   return (
     
-    <mesh ref={ref} scale={6}>
-      <torusGeometry />
+    <mesh ref={ref} scale={5}>
+      
+      <Text3D font="./fonts/helvetiker_regular.typeface.json">
+        Hello, hello !
+      
       <meshNormalMaterial />
+      </Text3D>
     </mesh>
   
   )
